@@ -1,0 +1,23 @@
+{
+  "name": "eiei-todo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "To-do list with username and password login, backed by SQLite",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.0"
+  }
+}

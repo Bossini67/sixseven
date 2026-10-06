@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-do list</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>To-do list</h1>
+
+      <section id="auth-view" hidden>
+        <form id="auth-form">
+          <label>
+            Username
+            <input id="username" autocomplete="username" required />
+          </label>
+          <label>
+            Password
+            <input id="password" type="password" autocomplete="current-password" required />
+          </label>
+          <div class="row">
+            <button type="submit" id="login-button">Log in</button>
+            <button type="button" id="register-button" class="secondary">Create account</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="tasks-view" hidden>
+        <div class="row spread">
+          <span>Signed in as <strong id="current-user"></strong></span>
+          <button type="button" id="logout-button" class="secondary">Log out</button>
+        </div>
+
+        <form id="task-form" class="row">
+          <input id="task-title" placeholder="What needs doing?" maxlength="200" />
+          <button type="submit">Add</button>
+        </form>
+
+        <ul id="task-list"></ul>
+        <p id="empty-note" hidden>No tasks yet.</p>
+      </section>
+
+      <p id="error" role="alert" hidden></p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
